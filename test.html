@@ -1,10 +1,6 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-    <title>#We Are Here</title>
-    <link rel="stylesheet" type="text/css" href="resetCSS.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
-
     <style>
         html {
             font-family: 'Noto Sans KR', sans-serif;
@@ -90,7 +86,7 @@
         }
 
         .content {
-            width: 899px;
+            width: 900px;
             height: 100%;
             margin: 0 auto;
             padding: 20px 0px;
@@ -106,13 +102,13 @@
             float: left;
             background-color: cornsilk;
             height: 200px;
-            width: 206px;
+            width: 200px;
             margin-right: 25px;
         }
 
         .product {
 
-            width: 206px;
+            width: 200px;
             height: 200px;
             background-color: burlywood;
         }
@@ -120,20 +116,18 @@
         body {
             height: 100%;
         }
-    </style>
 
+    </style>
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
         $(document).ready(function () {
-            $('.row_product').children().eq(3).css("margin-right", "0px");
+            $(".row_product").children().last().css("margin-right", "");
+            $('.headbox').css("background-color", "red");
         });
     </script>
-
-
 </head>
-
 <body>
-    <div id="wrap">
+     <div id="wrap">
         <div class="headbox">
             <div class="inheadbox">
                 <div class="logo">
@@ -208,4 +202,5 @@
 
         </div>
     </div>
-</body></html>
+</body>
+</html>
