@@ -124,9 +124,65 @@
 
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script>
-        $(document).ready(function () {
-            $('.row_product').children().eq(3).css("margin-right", "0px");
+        $(document).ready(function() {
+            $('.logo').click(addProduct());
+            //임시로 로고 누르면 상품 추가하게 했는데 왜 안되지.. 콘솔에서 함수 직접 사용해서 테스트
         });
+        
+        var col_length = 4; //한 행에 들어갈 상품 수
+
+        var addProduct = function() {   //상품 추가하는 함수
+            //현재 페이지에 있는 상품 행의 개수를 검사
+            var numOfChilren = $('.content').children().length; 
+            
+            //상품의 행이 없다면 새로 만듦
+            if (numOfChilren == 0) {
+                makeRowProduct();
+            }
+            
+            //마지막 행(상품을 추가할)을 정의
+            $parent_row_product = $('.content').children().eq(numOfChilren - 1);
+            
+            //마지막 행의 열 개수를 검사
+            var numOfRowChildren = $parent_row_product.children().length;
+            
+            //상품을 추가할 행이 가득 찼다면 새로운 행을 만듦 
+            if (numOfRowChildren == col_length)
+                makeRowProduct();
+            
+            //마지막 행을 다시 정의
+            numOfChilren = $('.content').children().length; 
+            $parent_row_product = $('.content').children().eq(numOfChilren - 1);
+            
+            //마지막 행에 열을 추가
+            makeColProduct($parent_row_product);
+        }
+        
+        //열을 추가하는 함수
+        var makeColProduct = function($parent_row_product) {
+            //열과 상품 요소를 생성
+            var $col_product = $("<div></div>");
+            var $product = $("<div></div>");
+            
+            //클래스 연결
+            $col_product.addClass("col_product");
+            $product.addClass("product");
+            
+            //네 번째 상품이면 마진 없애고 싶은데 왜 안되지...
+            if($parent_row_product.children().length == col_length - 1)
+                 $product.css("margin-right", "0px");
+                
+            //요소 연결
+            $col_product.append($product);
+            $parent_row_product.append($col_product);
+        }
+        
+        //열을 만드는 함수
+        var makeRowProduct = function() {
+            var $row_product = $("<div></div>")
+                $row_product.addClass("row_product");
+                $('.content').append($row_product);
+        }
     </script>
 
 
@@ -148,62 +204,11 @@
         </div>
         <div id="bodybox">
             <div class="content">
-                <div class="row_product">
+                <!--<div class="row_product">
                     <div class="col_product">
                         <div class="product"></div>
                     </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                </div>
-                <div class="row_product">
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                </div>
-                <div class="row_product">
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                </div>
-                <div class="row_product">
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                    <div class="col_product">
-                        <div class="product"></div>
-                    </div>
-                </div>
+                </div>-->
             </div>
 
         </div>
