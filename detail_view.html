@@ -4,9 +4,13 @@
     <link rel="stylesheet" type="text/css" href="resetCSS.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
     <style>
-        .idbox {
+        .titlebox {
             margin-top: 50px;
             height: 50px;
         }
@@ -20,20 +24,34 @@
             background-color: black;
         }
 
-        .id {
+        .title {
             float: left;
             width: 400px;
             height: 50px;
             margin-left: 10px;
-            padding-top: 10px;
-            padding-bottom: 10px;
             box-sizing: border-box;
+            line-height: 50px;
         }
 
         .picbox {
             margin-top: 3px;
             height: 899px;
-            background-color: #f6f6f6
+            background-color: #f6f6f6;
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 solid #fff;
+            background: #fff;
+        }
+
+        .picbox img {
+            width: 899px;
+            height: 899px;
         }
 
         .price {
@@ -51,11 +69,11 @@
         }
 
         .tags_buy {
-            height:50px;
+            height: 50px;
             margin-top: 20px;
             padding: 0 0;
         }
-        
+
         .margins {
             border-top: 1px solid #bfbfbf;
             height: 100px;
@@ -85,7 +103,26 @@
         }
     </style>
 
-    <script></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.slider').bxSlider({
+                auto: false
+            });
+        });
+
+        var setTitle = function(str_title) {
+            $('.title').html(str_title);
+        }
+
+        var setProfile = function(url_profile) {
+            $('.profile').attr('src', url_profile);
+        }
+
+        var setDate = function(date_date) {
+            $('.date').html(date_date);
+        }
+    </script>
 </head>
 
 <body>
@@ -104,12 +141,18 @@
         </div>
         <div id="bodybox">
             <div class="content">
-                <div class="idbox">
+                <div class="titlebox">
                     <div class="profile"></div>
-                    <div class="id">상품 이름이 들어가는 게 더 좋을 것 같아요!</div>
+                    <div class="title">상품 이름이 들어가는 게 더 좋을 것 같아요!</div>
                     <div class="date"></div>
                 </div>
-                <div class="picbox"></div>
+                <div class="picbox">
+                    <ul class="slider">
+                        <li><img src="https://previews.123rf.com/images/jalcaraz/jalcaraz1409/jalcaraz140900006/31489949-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C-%EB%B0%98%EC%A7%80.jpg" alt=""></li>
+                        <li><img src="https://previews.123rf.com/images/provinc/provinc1604/provinc160400115/58000197-%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C-%EA%B2%B0%ED%98%BC-%EB%B0%98%EC%A7%80-%ED%9D%B0%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%EA%B3%A0%EB%A6%BD%EC%9E%85%EB%8B%88%EB%8B%A4-%ED%8C%A8%EC%85%98-%EC%A3%BC%EC%96%BC%EB%A6%AC-3-%EC%B0%A8%EC%9B%90-%EB%94%94%EC%A7%80%ED%84%B8-%EB%A0%8C%EB%8D%94%EB%A7%81-%EB%90%9C-%EA%B7%B8%EB%A6%BC.jpg" alt=""></li>
+                        <li><img src="https://previews.123rf.com/images/provinc/provinc1604/provinc160400068/55808513-%EB%8B%A4%EC%9D%B4%EC%95%84%EB%AA%AC%EB%93%9C-%EB%B0%98%EC%A7%80-%EC%86%8C%EC%9B%90%EA%B3%BC-%ED%95%A8%EA%BB%98-%EB%B0%98%EC%A7%80-3d-%EB%94%94%EC%A7%80%ED%84%B8-%EA%B7%B8%EB%A6%BC-%EB%A0%8C%EB%8D%94%EB%A7%81.jpg" alt=""></li>
+                    </ul>
+                </div>
                 <div class="price">19,900￦</div>
                 <div class="description">여기 이렇게 설명이 잔뜩 들어갈 건데!<br>일케 일케? 하면 되나? 행간을 쫌 늘려야겠네!</div>
                 <div class="tags_buy">
