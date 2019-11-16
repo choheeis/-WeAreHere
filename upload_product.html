@@ -1,3 +1,6 @@
+<!-- 상품 업로드 페이지-->
+
+
 <html>
 
 <head>
@@ -16,7 +19,7 @@
     <script>
         $(document).ready(function() {
 
-            //isFile();
+        
             var $drop = $("#drop");
 
             $drop.on("dragenter", function(e) { //드래그 요소가 들어왔을떄
@@ -37,7 +40,8 @@
                 
                 $('.drop_caption').css('display', 'none');
                 e.preventDefault();
-
+                
+                //배경색을 원래대로 돌리고싶은데 동작을 안하네요..
                 $(this).css('background-color', 'rgb(255, 248, 238);');
 
 
