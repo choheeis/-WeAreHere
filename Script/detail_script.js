@@ -1,3 +1,12 @@
+$(document).ready(function() {
+            //이미지 슬라이더 플러그인
+            $('.slider').bxSlider({
+                //자동 넘김 끄기
+                auto: false
+            });
+        });  
+
+
 //제목 설정
 var setTitle = function (str_title) {
     $('.title').html(str_title);
