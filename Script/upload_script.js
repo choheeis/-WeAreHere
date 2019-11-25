@@ -127,7 +127,8 @@ function preview(file, idx) {
             $('#thumbnails').append($thum_div);
             
             //이미지 사이즈를 수정
-            resize($thum_img);
+            //resize($thum_img);
+            //버그 고칠 때 까지 사용 불가
             
         };
 

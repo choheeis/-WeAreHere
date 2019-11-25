@@ -70,7 +70,7 @@ textarea:focus {
 
 .thumb {
     width: 180px;
-    height: 180px;
+    height: auto;
     padding: 10px;
     display: inline-block;
     vertical-align: top;
@@ -79,7 +79,8 @@ textarea:focus {
 .thumb > img {
     padding-left: 10px;
     padding-top: 10px;
-
+    width: 170px;
+    height: auto;
 }
 
 .thumb > .close {
