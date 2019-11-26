@@ -47,7 +47,7 @@ var makeColProduct = function ($parent_row_product, productData) {
     //클래스 연결
     $col_product.addClass("col_product");
     $product.addClass("product");
-    $productImg.attr("src", productData.src);
+    $productImg.attr("src", productData/*.src*/);
 
     //네 번째 상품이면 오른쪽 마진을 없앤다
     if ($parent_row_product.children().length == COL_LENGTH - 1) {
