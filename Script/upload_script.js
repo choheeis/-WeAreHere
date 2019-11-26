@@ -127,7 +127,7 @@ function preview(file, idx) {
             $('#thumbnails').append($thum_div);
             
             //이미지 사이즈를 수정
-            //resize($thum_img);
+            //resize($thum_img, 170, 170);
             //버그 고칠 때 까지 사용 불가
             
         };
@@ -138,12 +138,10 @@ function preview(file, idx) {
 
 
 //이미지 사이즈 조절 함수. 비율을 유지한 채 최대 크기에 맞춰줌
-function resize(last_prv) {
-    var maxWidth = 170;
-    var maxHeight = 170;
+function resize($image, maxWidth, maxHeight) {
     var ratio = 0;
-    var width = $(last_prv).width();
-    var height = $(last_prv).height();
+    var width = $image.width();
+    var height = $image.height();
     //버그로 크기 값을 0으로 읽어오는 경우가 종종 있어요... 확인용 로그
     console.log('h = ' + height + ' w = ' + width);
 
@@ -152,23 +150,23 @@ function resize(last_prv) {
         console.log('width processing');
         ratio = maxWidth / width;
         //console.log('ratio = ' + ratio);
-        $(last_prv).css('width', maxWidth);
-        $(last_prv).css('height', height * ratio);
+        $image.css('width', maxWidth);
+        $image.css('height', height * ratio);
         height = height * ratio;
         //console.log('h = ' + $(last_prv).css('height') + ' w = ' + $(last_prv).css('width'));
     }
 
     //가로를 맞춘 후 다시 값들 재정비
-    var width = $(last_prv).width();
-    var height = $(last_prv).height();
+    var width = $image.width();
+    var height = $image.height();
 
     //가로를 맞춰도 세로가 최대 길이보다 길면 또 조정
     if (height > maxHeight) {
         console.log('height processing');
         ratio = maxHeight / height;
         //console.log('ratio = ' + ratio);
-        $(last_prv).css('height', maxHeight);
-        $(last_prv).css('width', width * ratio);
+        $image.css('height', maxHeight);
+        $image.css('width', width * ratio);
         width = width * ratio;
         //console.log('h = ' + $(last_prv).css('height') + ' w = ' + $(last_prv).css('width'));
     }

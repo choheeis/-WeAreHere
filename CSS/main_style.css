@@ -73,21 +73,25 @@ body {
 
 .row_product {
     display: block;
-    background-color: aqua;
     height: 225px;
 }
 
 .col_product {
     float: left;
-    background-color: cornsilk;
     height: 200px;
     width: 206px;
     margin-right: 25px;
+    
 }
 
 .product {
-
+    position:relative;
     width: 206px;
     height: 200px;
-    background-color: burlywood;
+}
+
+.product>img {
+    position:absolute;
+   margin:auto;
+            top:0; bottom:0; left:0; right:0;
 }
