@@ -16,6 +16,5 @@ $(document).ready(function () {
     
         var postNum = $('#my_product_box').children().length;
     
-    $('#post_amount').html(postNum);
-    console.log("하ㅏㅏ");
+    $('#post_amount').html(srcArray.length);
 });
