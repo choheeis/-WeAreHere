@@ -10,7 +10,9 @@ $(document).ready(function () {
     
     for(var i = 0; i < srcArray.length; i++)
         addProduct($('.content'), srcArray[i]);
+    //임시로 이미지 데이터 배열 형식으로 넘겼어요
+    
     
     //$('.test_button').click(addProduct($('.content'), productData));
-    //임시로 로고 누르면 상품 추가하게 했는데 왜 안되지.. 콘솔에서 함수 직접 사용해서 테스트
+    
 });

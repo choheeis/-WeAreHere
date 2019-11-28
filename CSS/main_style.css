@@ -23,6 +23,10 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    padding: 5px;
+}
+
 #bodybox {
     width: 1150px;
     margin: 0 auto;
@@ -35,6 +39,7 @@ body {
     height: 100px;
     box-sizing: border-box;
     padding: 15px 15px;
+    vertical-align: bottom;
 }
 
 .logo p {
@@ -58,6 +63,7 @@ body {
     background-color: #f7f7f7;
     border: 1px solid #bfbfbf;
     padding: 0 25px;
+    margin-bottom: 10px;
 }
 
 .searchbox:hover {

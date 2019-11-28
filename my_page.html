@@ -5,10 +5,14 @@
     <link rel="stylesheet" type="text/css" href="/CSS/resetCSS.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap&subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/main_style.css" type="text/css">
+    
     <link rel="stylesheet" href="/CSS/my_page_style.css" type="text/css">
+    
 
     <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="/Script/add_data_script.js" type="text/javascript"></script>
+    <script src="/Script/my_page_script.js" type="text/javascript"></script>
+    <script src="/Script/upload_script.js" type="text/javascript"></script>
 
     <style>
         
@@ -26,7 +30,6 @@
                 </div>
                 <div class="search">
                     <form>
-                       <input onclick="addProduct(); return false;" class="test_button" type="button" value="데이터 추가" />
                         <input class="searchbox" type="text" name="search" value="" />
                     </form>
                 </div>
@@ -44,11 +47,11 @@
                         <div id="post_sold">
                             <div>
                                 <div>post</div>
-                                <div class="amount">4</div>
+                                <div id="post_amount" class="amount">4</div>
                             </div>
                             <div>
                                 <div>sold out</div>
-                                <div class="amount">0</div>
+                                <div id="sold_amount" class="amount">0</div>
                             </div>
                         </div>
                     </div>

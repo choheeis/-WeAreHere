@@ -57,7 +57,7 @@ $(document).ready(function() {
                     });
 
 
-                    $.ajax({
+                    /*$.ajax({
 
                         url: '/api/etc/file/upload',
 
@@ -75,7 +75,7 @@ $(document).ready(function() {
 
                         }
 
-                    });
+                    });*/
 
                 });
 

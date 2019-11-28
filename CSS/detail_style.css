@@ -1,6 +1,7 @@
 .titlebox {
     margin-top: 50px;
     height: 50px;
+    margin-bottom: 10px;
 }
 
 .profile {
@@ -19,6 +20,12 @@
     margin-left: 10px;
     box-sizing: border-box;
     line-height: 50px;
+}
+
+.date {
+    display: inline-block;
+    float: right;
+    line-height: 70px;
 }
 
 .picbox {
