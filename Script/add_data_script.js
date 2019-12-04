@@ -65,7 +65,7 @@ var makeColProduct = function ($parent_row_product, productData) {
     //$col_product.append($product);
     $parent_row_product.append($col_product);
     
-    resize($productImg, 300, 300);
+    //resize($productImg, 300, 300);
 }
 
 //열을 만드는 함수
