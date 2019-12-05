@@ -158,6 +158,8 @@ var setTag = function(arr_tag) {
     var tags = "";
     
     for(var i = 0; i < tag_length; i++) {
+        if(arr_tag[i] == "")
+            continue;
         tags += "#";
         tags += arr_tag[i];
         tags += " ";

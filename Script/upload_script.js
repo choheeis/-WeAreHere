@@ -76,7 +76,12 @@ $(document).ready(function() {
                         }
 
                     });*/
-
+                    
+                    //태그 파싱이 잘 되었는지 확인
+                    var tagsArray = parseTag($(".form_tag").val());
+                    for(i = 0; i < tagsArray.length; i++)
+                    console.log(tagsArray[i] + " ");
+                    //콘솔로 하면 잘 되는데 버튼 누르면 안되네요...
                 });
 
 
@@ -170,4 +175,10 @@ function resize($image, maxWidth, maxHeight) {
         width = width * ratio;
         //console.log('h = ' + $(last_prv).css('height') + ' w = ' + $(last_prv).css('width'));
     }
+}
+
+//태그를 공백 기준으로 파싱
+function parseTag(tag_string) {
+    var tagsArray = tag_string.split(' ');
+    return tagsArray;
 }
