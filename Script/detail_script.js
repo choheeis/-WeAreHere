@@ -52,8 +52,48 @@ $(document).ready(function () {
         //자동 넘김 끄기
         auto: false
     });
+    
+    $('.buy').click(function(){
+        layer_popup(productData.contect);
+    });
+    
+    
 
 });
+
+//팝업 레이어 띄우는 함수
+function layer_popup(contect){
+    
+        //팝업 레이어 
+        var $el = $('#buy-layer');        
+
+        //팝업 말고는 흐리게
+        $('.dim-layer').fadeIn();
+    
+        //중앙에 띄우기 위해 크기 얻음
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+    
+        $el.find('p').html("판매자 연락처<br>" + contect);
+
+        $('a.btn-layerClose').click(function(){
+            $('.dim-layer').fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+    }
+
 
 var setProduct = function (productData) {
     setTitle(productData.title);
