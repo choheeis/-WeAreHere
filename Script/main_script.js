@@ -1,8 +1,6 @@
-  
-  
 $(document).ready(function () {
     var srcArray = new Array();
-    srcArray.push("https://m.afrimo.net/web/product/tiny/201808/0c2cafd3a350042731e9e598565323c7.jpg");
+     srcArray.push("https://m.afrimo.net/web/product/tiny/201808/0c2cafd3a350042731e9e598565323c7.jpg");
     srcArray.push("http://m.jlauren.co.kr/web/product/big/201903/35394376998c8f6612cc7b240b7ecc4d.jpg");
     srcArray.push("http://image2.lotteimall.com/goods/02/93/95/1392959302_L.jpg");
     srcArray.push("http://modmartin.co.kr/web/product/big/201503/155_shop1_297012.jpg");

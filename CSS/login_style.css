@@ -118,3 +118,9 @@ textarea:focus {
 .google>img {
     transform: translateX(-152px);
 }
+
+#to_signup {
+    text-align: end;
+    font-size: 15px;
+    color: #7b7b7b
+}
