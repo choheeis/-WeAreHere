@@ -53,7 +53,7 @@ $(document).ready(function () {
         auto: false
     });
     
-    $('.buy').click(function(){
+    $('#buy_button').click(function(){
         layer_popup(productData.contect);
     });
     

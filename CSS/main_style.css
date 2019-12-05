@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+a, a:link, a:visited, a:hover {
+    text-decoration: none;
+    color: currentColor;
+}
+
 #wrap {
     margin: 0 0;
     width: 100%;
@@ -135,7 +140,6 @@ body {
 
 .row_product {
     display: block;
-    background-color: aqua;
     height: 225px;
 }
 
