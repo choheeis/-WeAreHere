@@ -1,0 +1,71 @@
+.header {
+    font-style: italic;
+}
+
+#my_page_title {
+    text-align: center;
+    font-size: 1.563rem;
+    margin: 0.625rem 0;
+}
+
+#profile_box {
+    width: inherit;
+    height: 15rem;
+    margin-top: 1.25rem;
+    box-sizing: border-box;
+    ;
+}
+
+.white_box {
+    background: white;
+    padding: 0.9375rem;
+}
+
+#profile_circle {
+    padding-left: 6.25rem;
+    padding-right: 3.125rem;
+    margin-top: 1.875rem;
+    display: inline-block;
+
+}
+
+#profile_circle div {
+    background-color: antiquewhite;
+    width: 9.375rem;
+    height: 9.375rem;
+    border-radius: 6.25rem;
+
+}
+
+#name_post_sold {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 2.5rem;
+}
+
+#profile_name {
+    font-size: 1.563rem;
+    color: #ff9900;
+}
+
+#post_sold {
+    width: 8.75rem;
+    margin: 1.25rem auto;
+}
+
+#post_sold > div {
+    display: inline-block;
+    padding: 0.625rem;
+}
+
+.amount {
+    text-align: center;
+    margin: 0.4375rem 0;
+    font-size: 1.563rem;
+    color: #7c7c7c
+}
+
+#my_product_title {
+    margin: 1.875rem 0;
+    font-size: 1.25rem;
+}
